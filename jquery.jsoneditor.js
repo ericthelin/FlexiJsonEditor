@@ -98,7 +98,7 @@
     function parse(str) {
         var res;
         try { res = JSON.parse(str); }
-        catch (e) { res = null; error('JSON parse failed.'); }
+        catch (e) { res = str; error('JSON parse failed: Using "' + str + '" as a string.'); }
         return res;
     }
 
